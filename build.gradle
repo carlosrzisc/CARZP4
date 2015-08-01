@@ -17,3 +17,10 @@ allprojects {
         jcenter()
     }
 }
+
+task testLocalServer {
+    dependsOn ':backend:appengineRun'
+    mustRunAfter ':backend:appengineRun'
+    dependsOn ':app:connectedAndroidTest'
+    finalizedBy ':backend:appengineStop'
+}

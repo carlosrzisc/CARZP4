@@ -28,6 +28,7 @@
         android:id="@+id/progressBar"
         android:layout_marginTop="78dp"
         android:layout_below="@+id/button"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        />
 
 </RelativeLayout>

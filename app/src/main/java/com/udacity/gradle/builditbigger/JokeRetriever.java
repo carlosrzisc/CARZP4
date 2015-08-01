@@ -11,7 +11,7 @@ import com.google.api.client.googleapis.services.GoogleClientRequestInitializer;
 import java.io.IOException;
 
 /**
- * Created by carlos on 7/30/15.
+ * Async task to retrieve a joke from server
  */
 public class JokeRetriever extends AsyncTask<Void, Void, String> {
     private JokesApi jokesService = null;
@@ -40,9 +40,10 @@ public class JokeRetriever extends AsyncTask<Void, Void, String> {
             jokesService = builder.build();
         }
         try {
-            return jokesService.sayHi().execute().getData();
+            return jokesService.getJoke().execute().getData();
         } catch (IOException e) {
-            return e.getMessage();
+            e.printStackTrace();
+            return "";
         }
     }
 
