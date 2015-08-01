@@ -1,7 +1,7 @@
-package com.example;
+package com.jokerlibrary;
 
 public class Joker {
-    public String getJoke() {
+    public static String getJoke() {
         return "Q: What has more lives than a cat?\nA: A frog -- it croaks every night.";
     }
 }
