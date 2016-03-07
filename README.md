@@ -22,7 +22,8 @@ It customizes the behavior of the Gradle build tool, allowing automation of repe
 ## Install
 1. Install Android Studio, make sure that the Android SDK Tools are properly installed.
 2. Download or clone this repository and import it into Android Studio. 
-3. Compile and run.
+3. Compile and run `backend` project.
+4. Compile and run `app` project in emulator.
 
 ## Screenshots
 <img src="./screenshots/scj1.png" alt="Screenshot1" width="200px">
