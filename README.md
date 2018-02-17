@@ -5,6 +5,7 @@ This project is part of Udacity Nanodegree. This project creates an app with mul
 	3.	An Android Library containing an activity for displaying jokes
 	4.	An Android app that fetches jokes from the GCE module and passes them to the Android Library for display
 
+
 It customizes the behavior of the Gradle build tool, allowing automation of repetitive tasks. Particularly, factoring functionality into libraries and creating product flavors allowing for much bigger projects with minimal added complexity.
 
 ## Learning keys on this project:
