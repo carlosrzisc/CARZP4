@@ -21,27 +21,13 @@ apply plugin: 'war'
 apply plugin: 'com.google.cloud.tools.appengine'
 apply plugin: 'com.google.cloud.tools.endpoints-framework-server'
 
-sourceCompatibility = JavaVersion.VERSION_1_7
-targetCompatibility = JavaVersion.VERSION_1_7
-
 dependencies {
     implementation 'com.google.endpoints:endpoints-framework:2.0.9'
     implementation 'javax.inject:javax.inject:1'
     implementation 'javax.servlet:servlet-api:2.5'
-    compile project(":jokes_provider")
+    implementation project(":jokes_provider")
 }
 
-appengine {
-    tools.cloudSdkHome="/Users/carlos/Documents/Google Cloud SDK/google-cloud-sdk/bin/gcloud"
-    deploy {   // deploy configuration
-
-        // The following is used for acceptance tests and
-        // is not required for a migration.
-        project = findProperty("appengine.deploy.project")
-        version = findProperty("appengine.deploy.version")
-        def promoteProp = findProperty("appengine.deploy.promote")
-        if (promoteProp != null) {
-            promote = new Boolean(promoteProp)
-        }
-    }
+appengine {  // App Engine tasks configuration
+    tools.cloudSdkHome="/Users/carlos/gcloudsdk/google-cloud-sdk/"
 }
